@@ -1,0 +1,331 @@
+.privacy-page {
+    background: var(--background-gradient);
+    min-height: calc(100vh - var(--header-height));
+    margin-top: var(--header-height);
+    padding: 3rem 1rem;
+}
+
+.privacy-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: var(--background-color);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    padding: 2rem;
+
+    @media (max-width: 768px) {
+        padding: 1.5rem;
+    }
+}
+
+// Nagłówek strony
+.privacy-header {
+    margin-bottom: 3rem;
+    text-align: center;
+
+    .company-info {
+        margin-bottom: 2rem;
+
+        h1 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        p {
+            margin: 0.5rem 0;
+            color: var(--text-color);
+        }
+    }
+
+    .intro-message {
+        background: var(--background-color-alt);
+        padding: 2rem;
+        border-radius: var(--radius-md);
+        border: 1px solid var(--border-color);
+
+        p {
+            line-height: 1.6;
+            margin-bottom: 1rem;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+// Sekcje
+.privacy-section {
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border-color);
+
+    &:last-child {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        border-bottom: none;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        color: var(--primary-color);
+        margin-bottom: 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+
+        i {
+            font-size: 1.25rem;
+        }
+    }
+}
+
+// Bloki przetwarzania danych
+.processing-block {
+    background: var(--background-color-alt);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--border-color);
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    h3 {
+        color: var(--primary-color);
+        font-size: 1.3rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .processing-details {
+        display: grid;
+        gap: 1.5rem;
+
+        .detail-item {
+            h4 {
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                color: var(--text-color);
+                font-size: 1.1rem;
+                margin-bottom: 0.75rem;
+
+                i {
+                    color: var(--primary-color);
+                }
+            }
+
+            ul {
+                list-style: none;
+                margin-left: 1.5rem;
+
+                li {
+                    position: relative;
+                    margin-bottom: 0.5rem;
+                    line-height: 1.5;
+
+                    &::before {
+                        content: "•";
+                        color: var(--primary-color);
+                        position: absolute;
+                        left: -1rem;
+                    }
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+
+            p {
+                line-height: 1.5;
+            }
+        }
+    }
+}
+
+// Tabele
+.table-wrapper {
+    overflow-x: auto;
+    margin: 2rem 0;
+    
+    .data-table {
+        width: 100%;
+        border-collapse: collapse;
+        
+        th, td {
+            padding: 1rem;
+            border: 1px solid var(--border-color);
+            text-align: left;
+            vertical-align: top;
+        }
+        
+        th {
+            background-color: var(--background-color-alt);
+            font-weight: 600;
+            white-space: nowrap;
+        }
+        
+        td ul {
+            margin: 0;
+            padding-left: 1.5rem;
+            
+            li {
+                margin-bottom: 0.5rem;
+                line-height: 1.5;
+                
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        @media (max-width: 768px) {
+            font-size: 0.9rem;
+            
+            th, td {
+                padding: 0.75rem;
+            }
+        }
+    }
+}
+
+// Dodatkowe informacje
+.additional-info, .eu-data-transfer {
+    margin-top: 2rem;
+    background: var(--background-color-alt);
+    padding: 1.5rem;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-color);
+    
+    p {
+        margin-bottom: 1rem;
+        line-height: 1.6;
+    }
+
+    ul {
+        margin-top: 1rem;
+        padding-left: 1.5rem;
+        
+        li {
+            margin-bottom: 1rem;
+            line-height: 1.6;
+            position: relative;
+
+            &::before {
+                content: "•";
+                color: var(--primary-color);
+                position: absolute;
+                left: -1rem;
+            }
+            
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+// Kontakt
+.contact-box {
+    background: var(--background-color-alt);
+    padding: 1.5rem;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-color);
+    margin-top: 1.5rem;
+
+    a {
+        color: var(--primary-color);
+        text-decoration: none;
+        font-weight: 500;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+// Responsywność
+@media (max-width: 768px) {
+    .privacy-page {
+        padding: 2rem 1rem;
+    }
+
+    .privacy-header {
+        .company-info h1 {
+            font-size: 1.5rem;
+        }
+
+        .intro-message {
+            padding: 1.5rem;
+        }
+    }
+
+    .privacy-section {
+        margin-bottom: 2rem;
+        padding-bottom: 1.5rem;
+
+        h2 {
+            font-size: 1.3rem;
+        }
+    }
+
+    .processing-block {
+        padding: 1rem;
+
+        h3 {
+            font-size: 1.2rem;
+        }
+
+        .processing-details {
+            gap: 1rem;
+        }
+    }
+}
+
+.cookies-table-wrapper {
+    margin: 2rem 0;
+    overflow-x: auto;
+    
+    .cookies-table {
+        min-width: 600px;
+        width: 100%;
+        border-collapse: collapse;
+        
+        th, td {
+            padding: 0.75rem 1rem;
+            text-align: left;
+            border: 1px solid var(--border-color);
+        }
+        
+        th {
+            background-color: var(--background-color-alt);
+            font-weight: 600;
+            white-space: nowrap;
+        }
+        
+        td {
+            vertical-align: top;
+        }
+        
+        tr:nth-child(even) {
+            background-color: var(--background-color-alt);
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .cookies-table-wrapper {
+        margin: 1.5rem 0;
+        
+        .cookies-table {
+            font-size: 0.9rem;
+            
+            th, td {
+                padding: 0.5rem 0.75rem;
+            }
+        }
+    }
+} 

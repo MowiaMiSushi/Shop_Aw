@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-translate="returnsTitle">Zwroty | Twoj Sklep</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <script defer type="module" src="../js/translations.js"></script>
+    <script defer type="module" src="../js/themeLanguageManager.js"></script>
+    <script defer type="module" src="../js/script.js"></script>
+    <script defer src="../js/footer.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="top-bar">
+        <div class="top-bar-content">
+            <div class="contact-info">
+                <a href="mailto:twoj@email.pl">
+                    <i class="far fa-envelope"></i>
+                    Twoj@email.pl
+                </a>
+                <a href="tel:123456789">
+                    <i class="fas fa-phone"></i>
+                    123 456 789
+                </a>
+            </div>
+            <div class="user-links">
+                <a href="/pages/register.html" data-translate="register">
+                    <i class="fas fa-user-plus"></i>
+                    Zarejestruj się
+                </a>
+                <a href="/pages/login.html" data-translate="login">
+                    <i class="fas fa-sign-in-alt"></i>
+                    Zaloguj się
+                </a>
+                <a href="/cart.html" class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </a>
+                <div class="switchers">
+                    <div class="theme-switch">
+                        <i class="fas fa-moon switch-icon" id="theme-icon"></i>
+                    </div>
+                    <div class="lang-switch">
+                        <span class="current-lang">PL</span>
+                        <i class="fas fa-globe switch-icon"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <a href="/">
+                    <img src="../images/logo.png" alt="Logo sklepu" width="160" height="50">
+                </a>
+            </div>
+            <nav class="main-nav">
+                <div class="burger-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-links">
+                <li><a href="/" data-translate="home">Strona główna</a></li>
+                <li class="dropdown">
+                    <a href="#" data-translate="categories">Kategorie</a>
+                    <ul class="dropdown-content">
+                        <li><a href="/kategoria/Kategoria1" data-translate="Kategoria1">Kategoria 1</a></li>
+                        <li><a href="/kategoria/Kategoria2" data-translate="Kategoria2">Kategoria 2</a></li>
+                        <li><a href="/kategoria/Kategoria3" data-translate="Kategoria3">Kategoria 3</a></li>
+                    </ul>
+                </li>
+                <li><a href="/promocje" data-translate="promotions">Promocje</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="returns-page">
+        <h1 data-translate="returns">Zwroty i Reklamacje</h1>
+
+        <div class="returns-methods">
+            <div class="return-method">
+                <i class="fas fa-undo"></i>
+                <h2 data-translate="return14days">Zwrot do 14 dni</h2>
+                <ul>
+                    <li data-translate="returnInfo1">Prawo do odstąpienia od umowy</li>
+                    <li data-translate="returnInfo2">Towar nieużywany w oryginalnym opakowaniu</li>
+                    <li data-translate="returnInfo3">Zwrot pieniędzy do 14 dni</li>
+                </ul>
+            </div>
+
+            <div class="return-method">
+                <i class="fas fa-exclamation-circle"></i>
+                <h2 data-translate="complaint">Reklamacja</h2>
+                <ul>
+                    <li data-translate="complaintInfo1">Gwarancja 24 miesiące</li>
+                    <li data-translate="complaintInfo2">Rozpatrzenie do 14 dni</li>
+                    <li data-translate="complaintInfo3">Bezpłatna naprawa lub wymiana</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="return-process">
+            <h2 data-translate="returnProcess">
+                <i class="fas fa-clipboard-list"></i>
+                Proces zwrotu
+            </h2>
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <i class="fas fa-envelope-open-text"></i>
+                    <h3 data-translate="step1Title">Zgłoszenie</h3>
+                    <p data-translate="step1Info">Wypełnij formularz zwrotu lub skontaktuj się z nami mailowo</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <i class="fas fa-box-open"></i>
+                    <h3 data-translate="step2Title">Zapakowanie</h3>
+                    <p data-translate="step2Info">Zabezpiecz produkt w oryginalnym opakowaniu</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <i class="fas fa-shipping-fast"></i>
+                    <h3 data-translate="step3Title">Wysyłka</h3>
+                    <p data-translate="step3Info">Wyślij paczkę na nasz adres</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <i class="fas fa-wallet"></i>
+                    <h3 data-translate="step4Title">Zwrot pieniędzy</h3>
+                    <p data-translate="step4Info">Otrzymasz zwrot na podane konto bankowe</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="important-info">
+            <h2 data-translate="additionalInfo">
+                <i class="fas fa-info-circle"></i>
+                Dodatkowe informacje
+            </h2>
+            <div class="info-grid">
+                <div class="info-item">
+                    <i class="fas fa-file-alt"></i>
+                    <h3 data-translate="documents">Dokumenty</h3>
+                    <p data-translate="documentsInfo">Dołącz dowód zakupu i formularz zwrotu</p>
+                </div>
+
+                <div class="info-item">
+                    <i class="fas fa-truck-loading"></i>
+                    <h3 data-translate="returnCost">Koszt zwrotu</h3>
+                    <p data-translate="returnCostInfo">Koszty wysyłki zwrotu pokrywa kupujący</p>
+                </div>
+
+                <div class="info-item">
+                    <i class="fas fa-clock"></i>
+                    <h3 data-translate="returnTime">Czas realizacji</h3>
+                    <p data-translate="returnTimeInfo">Zwrot pieniędzy następuje do 14 dni od otrzymania przesyłki</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3 class="footer-heading">
+                    <span data-translate="help">Pomoc</span>
+                    <i class="fas fa-chevron-down footer-toggle"></i>
+                </h3>
+                <ul>
+                    <li><a href="/pages/faq.html" data-translate="faq">FAQ</a></li>
+                    <li><a href="/pages/contact.html" data-translate="contact">Kontakt</a></li>
+                    <li><a href="/pages/dostawa.html" data-translate="delivery">Dostawa</a></li>
+                    <li><a href="/pages/zwroty.html" data-translate="returns">Zwroty</a></li>
+                    <li><a href="/pages/platnosci.html" data-translate="paymentMethods">Sposoby płatności</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-heading">
+                    <span data-translate="account">Konto</span>
+                    <i class="fas fa-chevron-down footer-toggle"></i>
+                </h3>
+                <ul>
+                    <li><a href="/pages/login.html" data-translate="login">Zaloguj się</a></li>
+                    <li><a href="/pages/register.html" data-translate="register">Rejestracja</a></li>
+                    <li><a href="/pages/orders.html" data-translate="orders">Zamówienia</a></li>
+                    <li><a href="/pages/newsletter.html" data-translate="newsletter">Newsletter</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-heading">
+                    <span data-translate="about">O nas</span>
+                    <i class="fas fa-chevron-down footer-toggle"></i>
+                </h3>
+                <ul>
+                    <li><a href="/pages/about.html" data-translate="aboutUs">O firmie</a></li>
+                    <li><a href="/pages/regulamin.html" data-translate="terms">Regulamin</a></li>
+                    <li><a href="/pages/polityka-prywatnosci.html" data-translate="privacy">Polityka prywatności</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-heading">
+                    <span data-translate="socialMedia">Media społecznościowe</span>
+                    <i class="fas fa-chevron-down footer-toggle"></i>
+                </h3>
+                <ul class="social-links">
+                    <li>
+                        <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                            <span>Facebook</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                            <span>Instagram</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://tiktok.com" target="_blank" aria-label="TikTok">
+                            <i class="fab fa-tiktok"></i>
+                            <span>TikTok</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://youtube.com" target="_blank" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                            <span>YouTube</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 Twoja Firtma. <span data-translate="allRightsReserved">Wszelkie prawa zastrzeżone.</span></p>
+            <p>Strona wykonana przez <a href="https://www.linkedin.com/in/aleksander-wac%C5%82awik/" target="_blank" style="color: var(--primary-color);">Aleksander Wacławik</a></p>
+        </div>
+    </footer>
+</body>
+</html> 

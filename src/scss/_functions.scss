@@ -1,0 +1,6 @@
+@function darken($color, $amount) {
+    @if type-of($color) == 'color' {
+        @return mix(#000, $color, $amount);
+    }
+    @return $color;
+} 

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-translate="cartTitle">Koszyk | Biżuteria Handmade</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script defer src="/cart-page.js"></script>
+    <script defer type="module" src="/js/translations.js"></script>
+    <script defer type="module" src="/js/themeLanguageManager.js"></script>
+    <script defer type="module" src="/js/script.js"></script>
+</head>
+<body>
+    <!-- Header zostanie wstawiony przez JavaScript -->
+    <main class="cart-page">
+        <h1 data-translate="yourCart">Twój koszyk</h1>
+        <div class="cart-container">
+            <div class="cart-items">
+                <!-- Produkty będą dodawane dynamicznie -->
+            </div>
+            <div class="cart-summary">
+                <h2 data-translate="summary">Podsumowanie</h2>
+                <div class="summary-row">
+                    <span data-translate="productValue">Wartość produktów:</span>
+                    <span class="cart-subtotal">0,00 zł</span>
+                </div>
+                <div class="summary-row">
+                    <span data-translate="delivery">Dostawa:</span>
+                    <span class="shipping-cost">0,00 zł</span>
+                </div>
+                <div class="summary-row total">
+                    <span data-translate="total">Razem:</span>
+                    <span class="cart-total">0,00 zł</span>
+                </div>
+                <button class="checkout-button" data-translate="proceedToCheckout">Przejdź do kasy</button>
+            </div>
+        </div>
+    </main>
+    <!-- Footer zostanie wstawiony przez JavaScript -->
+</body>
+</html> 

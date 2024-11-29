@@ -1,0 +1,69 @@
+:root {
+    // Colors
+    --primary-color: #007bff;
+    --text-color: #333;
+    --background-color: #fff;
+    --border-color: #ddd;
+    --primary-color-light: #4dabf7;
+    --primary-color-dark: #1971c2;
+    --primary-color-rgb: 0, 123, 255;
+    --text-color-light: #6c757d;
+    --background-color-alt: #f8f9fa;
+    --warning-color: #ffa500;
+    --warning-color-light: #fff3e0;
+    --success-color: #4caf50;
+    --success-color-light: #e8f5e9;
+    
+    // Spacing
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+    
+    // Layout
+    --container-width: 1200px;
+    --header-height: 60px;
+    --top-bar-height: 40px;
+    --total-fixed-height: calc(var(--header-height) + var(--top-bar-height));
+    
+    // Social media colors
+    --google-color: #DB4437;
+    --facebook-color: #4267B2;
+    
+    // Shadows
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+    
+    // Transitions
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.4s ease;
+    
+    // Backgrounds
+    --background-gradient-light: linear-gradient(135deg, var(--background-color) 0%, var(--background-color-alt) 100%);
+    --background-gradient-dark: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    
+    // Kolory dla top-bar
+    --top-bar-bg: var(--background-color);
+    --top-bar-text: var(--text-color);
+    --top-bar-hover: var(--primary-color);
+    
+    // RGB wartości dla efektów hover
+    --text-color-rgb: 33, 37, 41; // dla jasnego motywu
+}
+
+[data-theme="dark"] {
+    --background-color: #121212;
+    --background-color-alt: #1e1e1e;
+    --text-color: #ffffff;
+    --text-color-light: #a0a0a0;
+    --border-color: #2a2a2a;
+    --background-gradient: var(--background-gradient-dark);
+    --text-color-rgb: 255, 255, 255;
+}
+
+[data-theme="light"] {
+    --background-gradient: var(--background-gradient-light);
+} 

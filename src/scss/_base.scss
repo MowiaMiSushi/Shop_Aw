@@ -1,0 +1,197 @@
+/*******************************
+ * BASE STYLES
+ * 1. Zmienne CSS
+ * 2. Dark Theme
+ * 3. Reset
+ * 4. Typography
+ * 5. Base Components
+ * 6. Utilities
+ *******************************/
+
+/* 1. Zmienne CSS
+   ========================================================================== */
+:root {
+    /* Colors - Primary */
+    --primary-color: #d4201f;
+    --primary-color-dark: #d4201f;
+    --primary-color-light: #ff4a4a;
+    
+    /* Colors - Secondary */
+    --secondary-color: #c0392b;
+    --accent-color: #f1c40f;
+    
+    /* Colors - Interface */
+    --text-color: #333;
+    --background-color: #fff;
+    --border-color: #ddd;
+    --input-background: #f9f9f9;
+    --gray-light: #ecf0f1;
+    
+    /* Colors - Footer */
+    --footer-bg: #000;
+    --footer-text: #fff;
+    --footer-link: #999;
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.12);
+    --shadow: 0 2px 8px rgba(0,0,0,0.1);
+    --shadow-lg: 0 4px 12px rgba(0,0,0,0.15);
+    
+    /* Spacing */
+    --spacing-xs: 0.5rem;    /* 8px */
+    --spacing-sm: 1rem;      /* 16px */
+    --spacing-md: 1.5rem;    /* 24px */
+    --spacing-lg: 2rem;      /* 32px */
+    --spacing-xl: 3rem;      /* 48px */
+    
+    /* Layout */
+    --top-bar-height: 40px;
+    --header-height: 82px;
+    --total-fixed-height: calc(var(--top-bar-height) + var(--header-height));
+    --container-width: 1200px;
+    
+    /* Border Radius */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-full: 9999px;
+    
+    /* Transitions */
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.5s ease;
+    
+    /* Z-index */
+    --z-dropdown: 100;
+    --z-header: 1000;
+    --z-modal: 2000;
+    --z-tooltip: 3000;
+}
+
+/* 2. Dark Theme
+   ========================================================================== */
+[data-theme="dark"] {
+    --primary-color: #d4201f;
+    --primary-color-dark: #d4201f;
+    --secondary-color: #e74c3c;
+    --text-color: #f0f0f0;
+    --background-color: #1a1a1a;
+    --border-color: #444;
+    --input-background: #2a2a2a;
+    --gray-light: #2c2c2c;
+    --shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+/* 3. Reset
+   ========================================================================== */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    transition: background-color var(--transition-normal),
+                color var(--transition-normal);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* 4. Typography
+   ========================================================================== */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: var(--spacing-sm);
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.75rem; }
+h4 { font-size: 1.5rem; }
+h5 { font-size: 1.25rem; }
+h6 { font-size: 1rem; }
+
+p {
+    margin-bottom: var(--spacing-sm);
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color var(--transition-normal);
+    
+    &:hover {
+        color: var(--primary-color-dark);
+    }
+}
+
+/* 5. Base Components
+   ========================================================================== */
+.container {
+    width: 100%;
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 var(--spacing-lg);
+}
+
+.section {
+    padding: var(--spacing-xl) 0;
+}
+
+/* 6. Utilities
+   ========================================================================== */
+/* Display */
+.d-none { display: none !important; }
+.d-block { display: block !important; }
+.d-flex { display: flex !important; }
+.d-grid { display: grid !important; }
+
+/* Flex utilities */
+.flex-column { flex-direction: column !important; }
+.justify-center { justify-content: center !important; }
+.align-center { align-items: center !important; }
+.flex-wrap { flex-wrap: wrap !important; }
+
+/* Spacing */
+.m-0 { margin: 0 !important; }
+.mt-1 { margin-top: var(--spacing-xs) !important; }
+.mt-2 { margin-top: var(--spacing-sm) !important; }
+.mt-3 { margin-top: var(--spacing-md) !important; }
+.mt-4 { margin-top: var(--spacing-lg) !important; }
+.mt-5 { margin-top: var(--spacing-xl) !important; }
+
+/* ... podobne klasy dla innych kierunków margin i padding ... */
+
+/* Text */
+.text-center { text-align: center !important; }
+.text-left { text-align: left !important; }
+.text-right { text-align: right !important; }
+
+/* Colors */
+.text-primary { color: var(--primary-color) !important; }
+.bg-primary { background-color: var(--primary-color) !important; }
+
+/* Visibility */
+.visible { visibility: visible !important; }
+.invisible { visibility: hidden !important; } 

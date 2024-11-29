@@ -1,0 +1,235 @@
+.returns-page {
+    margin-top: var(--total-fixed-height);
+    padding: var(--spacing-xl) var(--spacing-lg);
+    max-width: var(--container-width);
+    margin: var(--total-fixed-height) auto 0;
+
+    h1 {
+        text-align: center;
+        margin-bottom: var(--spacing-xl);
+        color: var(--text-color);
+    }
+
+    // Sekcja z metodami zwrotów
+    .returns-methods {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-xl);
+        margin-bottom: var(--spacing-xl);
+
+        .return-method {
+            background: var(--background-color);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-xl);
+            text-align: left;
+            position: relative;
+            box-shadow: var(--shadow);
+            border: 2px solid var(--primary-color);
+            transition: transform var(--transition-normal);
+
+            &:hover {
+                transform: translateY(-5px);
+            }
+
+            i {
+                font-size: 2rem;
+                color: var(--primary-color);
+                margin-bottom: var(--spacing-md);
+                display: inline-block;
+                padding: var(--spacing-sm);
+                border-radius: 50%;
+                background: var(--background-color-alt);
+            }
+
+            h2 {
+                margin-bottom: var(--spacing-lg);
+                font-size: 1.5rem;
+                color: var(--text-color);
+            }
+
+            ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+
+                li {
+                    margin-bottom: var(--spacing-md);
+                    color: var(--text-color);
+                    display: flex;
+                    align-items: center;
+                    gap: var(--spacing-sm);
+
+                    &::before {
+                        content: "✓";
+                        color: var(--primary-color);
+                        font-weight: bold;
+                    }
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    // Sekcja z procesem zwrotu
+    .return-process {
+        background: linear-gradient(to right, var(--background-color), var(--background-color-alt));
+        padding: var(--spacing-xl);
+        border-radius: var(--radius-lg);
+        margin: var(--spacing-xl) 0;
+        text-align: center;
+        box-shadow: var(--shadow);
+        border: 2px solid var(--primary-color);
+
+        h2 {
+            color: var(--text-color);
+            margin-bottom: var(--spacing-xl);
+            font-size: 1.8rem;
+            position: relative;
+            display: inline-block;
+
+            i {
+                margin-right: var(--spacing-sm);
+                color: var(--primary-color);
+            }
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: var(--spacing-xl);
+
+            .step {
+                position: relative;
+                padding: var(--spacing-lg);
+                background: var(--background-color);
+                border-radius: var(--radius-lg);
+                transition: transform var(--transition-normal);
+
+                &:hover {
+                    transform: translateY(-5px);
+                }
+
+                .step-number {
+                    position: absolute;
+                    top: -15px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 30px;
+                    height: 30px;
+                    background: var(--primary-color);
+                    color: white;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-weight: bold;
+                }
+
+                i {
+                    font-size: 2rem;
+                    color: var(--primary-color);
+                    margin-bottom: var(--spacing-md);
+                }
+
+                h3 {
+                    margin-bottom: var(--spacing-sm);
+                    color: var(--text-color);
+                }
+
+                p {
+                    color: var(--text-color);
+                    font-size: 0.9rem;
+                    line-height: 1.5;
+                }
+            }
+        }
+    }
+
+    // Sekcja z dodatkowymi informacjami
+    .important-info {
+        background: linear-gradient(to right, var(--background-color), var(--background-color-alt));
+        padding: var(--spacing-xl);
+        border-radius: var(--radius-lg);
+        margin: var(--spacing-xl) 0;
+        text-align: center;
+        box-shadow: var(--shadow);
+        border: 2px solid var(--primary-color);
+
+        h2 {
+            color: var(--text-color);
+            margin-bottom: var(--spacing-xl);
+            font-size: 1.8rem;
+            position: relative;
+            display: inline-block;
+
+            i {
+                margin-right: var(--spacing-sm);
+                color: var(--primary-color);
+            }
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--spacing-xl);
+
+            .info-item {
+                background: var(--background-color);
+                padding: var(--spacing-lg);
+                border-radius: var(--radius-lg);
+                transition: transform var(--transition-normal);
+
+                &:hover {
+                    transform: translateY(-5px);
+                }
+
+                i {
+                    font-size: 2rem;
+                    color: var(--primary-color);
+                    margin-bottom: var(--spacing-md);
+                }
+
+                h3 {
+                    margin-bottom: var(--spacing-sm);
+                    color: var(--text-color);
+                }
+
+                p {
+                    color: var(--text-color);
+                    font-size: 0.9rem;
+                    line-height: 1.5;
+                }
+            }
+        }
+    }
+}
+
+// Style responsywne
+@media (max-width: 1200px) {
+    .returns-page {
+        .process-steps {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .returns-page {
+        padding: var(--spacing-lg) var(--spacing-md);
+
+        .returns-methods {
+            grid-template-columns: 1fr;
+        }
+
+        .process-steps {
+            grid-template-columns: 1fr;
+        }
+
+        .info-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+} 

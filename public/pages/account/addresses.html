@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-translate="addresses">Adresy | Twój Sklep</title>
+    <link rel="stylesheet" href="../../css/main.css">
+    <script defer type="module" src="../../js/translations.js"></script>
+    <script defer type="module" src="../../js/themeLanguageManager.js"></script>
+    <script defer type="module" src="../../js/script.js"></script>
+    <script defer src="../../js/footer.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script defer type="module" src="../../js/account/addresses.js"></script>
+</head>
+
+<body>
+    <div class="top-bar">
+        <div class="top-bar-content">
+            <div class="contact-info">
+                <a href="mailto:twoj@email.pl">
+                    <i class="far fa-envelope"></i>
+                    Twoj@email.pl
+                </a>
+                <a href="tel:123456789">
+                    <i class="fas fa-phone"></i>
+                    123 456 789
+                </a>
+            </div>
+            <div class="user-links">
+                <a href="/pages/register.html" data-translate="register">
+                    <i class="fas fa-user-plus"></i>
+                    Zarejestruj się
+                </a>
+                <a href="/pages/login.html" data-translate="login">
+                    <i class="fas fa-sign-in-alt"></i>
+                    Zaloguj się
+                </a>
+                <a href="/cart.html" class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </a>
+                <div class="switchers">
+                    <div class="theme-switch">
+                        <i class="fas fa-moon switch-icon" id="theme-icon"></i>
+                    </div>
+                    <div class="lang-switch">
+                        <span class="current-lang">PL</span>
+                        <i class="fas fa-globe switch-icon"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <a href="/">
+                    <img src="/images/logo.png" alt="Logo sklepu" width="160" height="50">
+                </a>
+            </div>
+            <nav class="main-nav">
+                <div class="burger-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-links">
+                <li><a href="/" data-translate="home">Strona główna</a></li>
+                <li class="dropdown">
+                    <a href="#" data-translate="categories">Kategorie</a>
+                    <ul class="dropdown-content">
+                        <li><a href="/kategoria/Kategoria1" data-translate="Kategoria1">Kategoria 1</a></li>
+                        <li><a href="/kategoria/Kategoria2" data-translate="Kategoria2">Kategoria 2</a></li>
+                        <li><a href="/kategoria/Kategoria3" data-translate="Kategoria3">Kategoria 3</a></li>
+                    </ul>
+                </li>
+                <li><a href="/promocje" data-translate="promotions">Promocje</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main class="main-content account-page">
+        <!-- Panel boczny z nawigacją konta -->
+        <div class="account-container">
+            <aside class="account-sidebar">
+                <nav class="account-nav">
+                    <ul>
+                        <li class="active">
+                            <a href="/pages/account.html">
+                                <i class="fas fa-home"></i>
+                                <span data-translate="dashboard">Panel główny</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/pages/account/orders.html">
+                                <i class="fas fa-shopping-bag"></i>
+                                <span data-translate="myOrders">Moje zamówienia</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/pages/account/details.html">
+                                <i class="fas fa-user"></i>
+                                <span data-translate="accountDetails">Dane konta</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/pages/account/addresses.html">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span data-translate="addresses">Adresy</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/pages/account/wishlist.html">
+                                <i class="fas fa-heart"></i>
+                                <span data-translate="wishlist">Lista życzeń</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/pages/account/newsletter.html">
+                                <i class="fas fa-envelope"></i>
+                                <span data-translate="newsletter">Newsletter</span>
+                            </a>
+                        </li>
+                        <li class="logout">
+                            <a href="/logout">
+                                <i class="fas fa-sign-out-alt"></i>
+                                <span data-translate="logout">Wyloguj się</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </aside>
+        
+            <div class="account-content">
+                <div class="welcome-section">
+                    <h1 data-translate="addresses">Adresy</h1>
+                    <p data-translate="addressesDesc">Zarządzaj swoimi adresami dostawy</p>
+                </div>
+
+                <div class="addresses-section">
+                    <!-- Przycisk dodawania nowego adresu -->
+                    <button class="add-address-btn">
+                        <i class="fas fa-plus"></i>
+                        <span data-translate="addNewAddress">Dodaj nowy adres</span>
+                    </button>
+
+                    <!-- Lista adresów -->
+                    <div class="addresses-grid">
+                        <!-- Adres domowy -->
+                        <div class="address-card">
+                            <div class="address-header">
+                                <h3>
+                                    <i class="fas fa-home"></i>
+                                    <span data-translate="homeAddress">Adres domowy</span>
+                                </h3>
+                                <div class="address-badges">
+                                    <span class="badge primary" data-translate="default">Domyślny</span>
+                                    <span class="badge" data-translate="billing">Rozliczeniowy</span>
+                                </div>
+                            </div>
+                            
+                            <div class="address-content">
+                                <p class="name">Jan Kowalski</p>
+                                <p class="street">ul. Przykładowa 123/4</p>
+                                <p class="city">00-123 Warszawa</p>
+                                <p class="country">Polska</p>
+                                <p class="phone">Tel: 123 456 789</p>
+                            </div>
+
+                            <div class="address-actions">
+                                <button class="btn-secondary" data-translate="edit">
+                                    <i class="fas fa-edit"></i> Edytuj
+                                </button>
+                                <button class="btn-danger" data-translate="delete">
+                                    <i class="fas fa-trash"></i> Usuń
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Adres do pracy -->
+                        <div class="address-card">
+                            <div class="address-header">
+                                <h3>
+                                    <i class="fas fa-building"></i>
+                                    <span data-translate="workAddress">Adres do pracy</span>
+                                </h3>
+                            </div>
+                            
+                            <div class="address-content">
+                                <p class="name">Jan Kowalski</p>
+                                <p class="street">ul. Biurowa 45</p>
+                                <p class="city">00-456 Warszawa</p>
+                                <p class="country">Polska</p>
+                                <p class="phone">Tel: 987 654 321</p>
+                            </div>
+
+                            <div class="address-actions">
+                                <button class="btn-text" data-translate="setAsDefault">
+                                    Ustaw jako domyślny
+                                </button>
+                                <button class="btn-secondary" data-translate="edit">
+                                    <i class="fas fa-edit"></i> Edytuj
+                                </button>
+                                <button class="btn-danger" data-translate="delete">
+                                    <i class="fas fa-trash"></i> Usuń
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3 class="footer-heading">
+                    <span data-translate="help">Pomoc</span>
+                    <i class="fas fa-chevron-down footer-toggle"></i>
+                </h3>
+                <ul>
+                    <li><a href="/pages/faq.html" data-translate="faq">FAQ</a></li>
+                    <li><a href="/pages/contact.html" data-translate="contact">Kontakt</a></li>
+                    <li><a href="/pages/dostawa.html" data-translate="delivery">Dostawa</a></li>
+                    <li><a href="/pages/zwroty.html" data-translate="returns">Zwroty</a></li>
+                    <li><a href="/pages/platnosci.html" data-translate="paymentMethods">Sposoby płatności</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-heading">
+                    <span data-translate="account">Konto</span>
+                    <i class="fas fa-chevron-down footer-toggle"></i>
+                </h3>
+                <ul>
+                    <li><a href="/pages/login.html" data-translate="login">Zaloguj się</a></li>
+                    <li><a href="/pages/register.html" data-translate="register">Rejestracja</a></li>
+                    <li><a href="/pages/account.html" data-translate="account">Konto</a></li>
+                    <li><a href="/pages/orders.html" data-translate="orders">Zamówienia</a></li>
+                    <li><a href="/pages/newsletter.html" data-translate="newsletter">Newsletter</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-heading">
+                    <span data-translate="about">O nas</span>
+                    <i class="fas fa-chevron-down footer-toggle"></i>
+                </h3>
+                <ul>
+                    <li><a href="/pages/about.html" data-translate="aboutUs">O firmie</a></li>
+                    <li><a href="/pages/regulamin.html" data-translate="terms">Regulamin</a></li>
+                    <li><a href="/pages/polityka-prywatnosci.html" data-translate="privacy">Polityka prywatności</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-heading">
+                    <span data-translate="socialMedia">Media społecznościowe</span>
+                    <i class="fas fa-chevron-down footer-toggle"></i>
+                </h3>
+                <ul class="social-links">
+                    <li>
+                        <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                            <span>Facebook</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                            <span>Instagram</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://tiktok.com" target="_blank" aria-label="TikTok">
+                            <i class="fab fa-tiktok"></i>
+                            <span>TikTok</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://youtube.com" target="_blank" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                            <span>YouTube</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 Twoja Firtma. <span data-translate="allRightsReserved">Wszelkie prawa zastrzeżone.</span></p>
+            <p>Strona wykonana przez <a href="https://www.linkedin.com/in/aleksander-wac%C5%82awik/" target="_blank" style="color: var(--primary-color);">Aleksander Wacławik</a></p>
+        </div>
+    </footer>
+    <script type="module" src="../../js/account/sidebar.js"></script>
+</body>
+</html>
